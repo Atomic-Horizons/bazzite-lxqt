@@ -38,3 +38,12 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
 ### LINTING
 ## Verify final image and contents are correct.
 RUN bootc container lint
+
+# force system and apps to use wayland
+ENV XDG_SESSION_TYPE=wayland
+ENV XDG_CURRENT_DESKTOP=LXQt
+ENV GDK_BACKEND=wayland,x11
+ENV QT_QPA_PLATFORM="wayland;xcb"
+
+# hide the annoying waylandxbridge window
+ENV LABWC_XWAYLAND=1
