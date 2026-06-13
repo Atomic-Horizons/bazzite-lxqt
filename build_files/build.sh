@@ -12,22 +12,6 @@ set -ouex pipefail
 # this installs a package from fedora repos
 dnf5 install -y \
     vlc \
-    lxqt-session \
-    lxqt-panel \
-    lxqt-runner \
-    lxqt-config \
-    pcmanfm-qt \
-    lxqt-notificationd \
-    lxqt-wayland-session \
-    labwc \
-    lxqt-policykit \
-    xdg-desktop-portal-wlr \
-    kanshi \
-    labwc \
-    wdisplays \
-    wlr-randr \
-    breeze-icon-theme \
-    lximage-qt \
     
 # Use a COPR Example:
 #
