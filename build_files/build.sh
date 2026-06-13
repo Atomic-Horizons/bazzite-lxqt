@@ -10,8 +10,19 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y tmux vlc lxqt-desktop lxqt-wayland-session labwc lxqt-policykit xdg-desktop-portal-wlr wl-clipboard
-
+dnf5 install -y \
+    vlc \
+    lxqt-session \
+    lxqt-panel \
+    lxqt-runner \
+    lxqt-config \
+    pcmanfm-qt \
+    lxqt-notificationd \
+    lxqt-wayland-session \
+    labwc \
+    lxqt-policykit \
+    xdg-desktop-portal-wlr
+    
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
