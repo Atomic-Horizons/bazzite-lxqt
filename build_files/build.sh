@@ -26,6 +26,8 @@ dnf5 install -y \
     labwc \
     wdisplays \
     wlr-randr \
+    breeze-icon-theme \
+    lximage-qt \
     
 # Use a COPR Example:
 #
