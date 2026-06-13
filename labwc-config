@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<labwc_config>
+  <core>
+    <xwayland enable="true" scale="1" />
+  </core>
+</labwc_config>
