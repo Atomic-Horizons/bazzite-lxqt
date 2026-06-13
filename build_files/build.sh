@@ -22,7 +22,8 @@ dnf5 install -y \
     labwc \
     lxqt-policykit \
     xdg-desktop-portal-wlr \
-    kanshi
+    kanshi \
+    kscreen
     
 # Use a COPR Example:
 #
