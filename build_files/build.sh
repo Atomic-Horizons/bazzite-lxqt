@@ -21,7 +21,8 @@ dnf5 install -y \
     lxqt-wayland-session \
     labwc \
     lxqt-policykit \
-    xdg-desktop-portal-wlr
+    xdg-desktop-portal-wlr \
+    kanshi
     
 # Use a COPR Example:
 #
