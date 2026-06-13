@@ -38,11 +38,3 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
 ### LINTING
 ## Verify final image and contents are correct.
 RUN bootc container lint
-
-# creating fallback for configs
-RUN mkdir -p /etc/skel/.config/labwc \
-    && mkdir -p /etc/skel/.config/lxqt
-
-# bake configs into the image
-COPY labwc-config /etc/skel/.config/labwc/rc.xml
-COPY lxqt-environment /etc/skel/.config/lxqt/session.conf
