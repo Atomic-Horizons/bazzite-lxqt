@@ -39,11 +39,10 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
 ## Verify final image and contents are correct.
 RUN bootc container lint
 
-# force system and apps to use wayland
-ENV XDG_SESSION_TYPE=wayland
-ENV XDG_CURRENT_DESKTOP=LXQt
-ENV GDK_BACKEND=wayland,x11
-ENV QT_QPA_PLATFORM="wayland;xcb"
+# creating fallback for configs
+RUN mkdir -p /etc/skel/.config/labwc \
+    && mkdir -p /etc/skel/.config/lxqt
 
-# hide the annoying waylandxbridge window
-ENV LABWC_XWAYLAND=1
+# bake configs into the image
+COPY labwc-config /etc/skel/.config/labwc/rc.xml
+COPY lxqt-environment /etc/skel/.config/lxqt/session.conf
